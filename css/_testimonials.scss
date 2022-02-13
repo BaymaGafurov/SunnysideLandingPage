@@ -1,0 +1,74 @@
+.testimonials {
+    padding: 3rem 1.2rem;
+}
+
+.testimonials h3{
+    color: $DarkGrayishBlue;
+    text-align: center;
+    letter-spacing: 0.13rem;
+    text-transform: uppercase; 
+}
+
+.clients {
+    display: flex;
+    flex-wrap: wrap;
+    @include breakpoint-up(tablet){
+        flex-wrap: nowrap;
+        margin: 0 2rem;
+    }
+}
+
+.client {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 1.25rem auto;
+
+    @include breakpoint-up(tablet){
+        justify-content: stretch;
+        margin: 1rem;
+    }
+}
+
+.testimonial-text {
+    @include breakpoint-up(tablet){
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 0.5rem;
+}
+}
+.testimonial-text h5 {
+    margin-top: 1rem;
+    margin-bottom: 0.125rem;
+    font-size: 1rem;
+}
+
+.testimonial-text p {
+    @include breakpoint-up(tablet){
+        margin: 1.25rem 0;
+        padding: 0;
+    }
+}
+
+.testimonial-text .small-text {
+    font-size: smaller;
+    color: $GrayishBlue;
+    margin-top: 0;
+}
+
+.client .img {
+    padding: 0.125rem;
+}
+
+.client img {
+    margin: 1rem auto;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    @include breakpoint-up(tablet){
+        margin: 1.25rem;
+    }
+}

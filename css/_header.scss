@@ -1,0 +1,117 @@
+.header {
+    background-image: url('../images/mobile/image-header.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 25rem;
+    padding: 1.125rem;
+
+    @include breakpoint-up(tablet){
+        background-image: url('../images/desktop/image-header.jpg');
+        height: 70vh;
+        max-width: 100vw;
+    }
+
+    &.open {
+        .header__menu{
+        >span:first-child {
+            transform:rotate(45deg);
+        }
+
+        >span:nth-child(2){
+            opacity: 0;
+        }
+
+        >span:last-child {
+            transform:rotate(-45deg);
+        }
+    }
+    }
+}
+
+.header__overlay {
+   
+    @include breakpoint-down(mobile){
+        display: flex;
+        flex-direction: column;
+        margin: 2rem 0rem;
+        padding: 1rem 0;
+        text-align: center;
+        background: white;
+        
+        
+    .link {
+        color: $VeryDarkDesaturatedBlue;
+        margin-top: 0.5rem;
+        
+        padding: 1rem 0;
+        width: 100%;
+        font-size: 1.25rem;
+        font-weight: 400;
+        border-radius: 25px;
+    }
+
+    .link:active {
+        background: $Yellow;
+    }}
+
+}
+
+.header__menu > span {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background-color: $White;
+    transition: all 300ms ease-in-out;
+    transform-origin: 3px 1px;
+
+    &:not(:last-child){
+        margin-bottom: 5px;
+    }   
+}
+
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.header-content {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+
+    @include breakpoint-down(mobile){
+        margin-top: -20rem;}
+}
+
+
+
+.header-content h1{
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    font-family: "Fraunces", sans-serif;
+    color: $White;
+    z-index: 0;
+
+    @include breakpoint-up(tablet){
+        font-size: 2.5rem;
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+}
+
+.opacity{
+    opacity: 0;   
+}
+
+.header-content img {
+    margin: 0;
+
+}
+

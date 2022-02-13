@@ -1,0 +1,16 @@
+.images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    overflow-x: hidden;
+
+    @include breakpoint-up(tablet) {
+        display: flex;
+        
+    }
+}
+
+.images img {
+    max-width: calc(99vw / 2);
+@include breakpoint-up(tablet){
+    max-width: calc(99vw / 4);
+}}

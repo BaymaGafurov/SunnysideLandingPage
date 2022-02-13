@@ -1,0 +1,35 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 0;
+    height: 17rem;
+    background-color: $LightModerateCyan;
+}
+
+.footer .logo-icon:hover {
+    filter: brightness(12);
+}
+
+.footer .words  a
+{
+   margin: 0 0.5rem;
+   color: $DarkModerateCyan;
+   text-decoration: none;
+   transition: 250ms ease;
+}
+
+.footer .words a:hover {
+    color: $White;
+}
+
+.footer .icons img{
+    margin: 0 0.35rem;
+   color: $DarkModerateCyan;
+   transition: 250ms ease;
+}
+
+.footer .icons img:hover{
+   filter: brightness(12);
+}
